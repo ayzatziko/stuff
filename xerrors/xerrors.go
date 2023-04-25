@@ -3,7 +3,7 @@ package xerrors
 import "fmt"
 
 func Wrap(err *error, format string, args ...interface{}) {
-	if err == nil {
+	if *err == nil {
 		return
 	}
 
